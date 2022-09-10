@@ -5,7 +5,7 @@ diffview.setup({
   use_icons = true,         -- Requires nvim-web-devicons
   view = {
     default = {
-      layout = "diff3_mixed"
+      layout = "diff2_horizontal"
     },
     merge_tool = {
       layout = "diff3_mixed"
