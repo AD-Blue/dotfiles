@@ -52,5 +52,7 @@ packer.startup(function(use)
         })
       end
   })
+  use 'stevearc/aerial.nvim'
+  use 'sitiom/nvim-numbertoggle'
 
 end)

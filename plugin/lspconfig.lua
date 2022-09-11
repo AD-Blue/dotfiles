@@ -12,6 +12,8 @@ local on_attach = function(client, bufnr)
 
   local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
 
+  require("aerial").on_attach(client, bufnr)
+
   client.resolved_capabilities.document_formatting = false
   client.resolved_capabilities.document_range_formatting = false
 
