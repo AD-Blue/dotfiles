@@ -20,7 +20,8 @@ packer.startup(function(use)
   use 'MunifTanjim/prettier.nvim' -- Prettier plugin for Neovim's built-in LSP client
   use 'williamboman/mason.nvim'
   use 'williamboman/mason-lspconfig.nvim'
-  use 'glepnir/lspsaga.nvim' -- LSP UIs
+  --  disabling LSP Saga to test out navigator since it's supposed to have similar functionality
+  --  use 'glepnir/lspsaga.nvim' -- LSP UIs
   use 'L3MON4D3/LuaSnip'
   use {
     'nvim-treesitter/nvim-treesitter',
@@ -41,7 +42,7 @@ packer.startup(function(use)
 
   use 'lewis6991/gitsigns.nvim'
   use 'dinhhuy258/git.nvim' -- For git blame & browse
-  use {'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim'}
+  use 'sindrets/diffview.nvim'
   use 'gpanders/editorconfig.nvim' -- For editorconfig
   use({
       "kylechui/nvim-surround", -- For wrapping text in tags, brackets, braces, quotes, etc
@@ -54,5 +55,7 @@ packer.startup(function(use)
   })
   use 'stevearc/aerial.nvim'
   use 'sitiom/nvim-numbertoggle'
+  use {'ray-x/guihua.lua', run = 'cd lua/fzy && make'}
+  use 'ray-x/navigator.lua'
 
 end)
