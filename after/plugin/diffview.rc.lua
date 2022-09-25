@@ -12,3 +12,6 @@ diffview.setup({
     }
   }
 })
+
+vim.keymap.set('n', '<leader>vo', ':DiffviewOpen<Return>')
+vim.keymap.set('n', '<leader>vc', ':DiffviewClose<Return>')

@@ -3,6 +3,7 @@ require('highlights')
 require('maps')
 require('plugins')
 
+
 require'lspconfig'.rust_analyzer.setup({})
 
 local has = function(x)

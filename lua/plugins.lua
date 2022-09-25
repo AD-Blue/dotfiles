@@ -57,5 +57,6 @@ packer.startup(function(use)
   use 'sitiom/nvim-numbertoggle'
   use {'ray-x/guihua.lua', run = 'cd lua/fzy && make'}
   use 'ray-x/navigator.lua'
+  use 's1n7ax/nvim-terminal'
 
 end)
