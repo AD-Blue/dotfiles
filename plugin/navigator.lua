@@ -34,6 +34,12 @@ navigator.setup({
     end
   end,
 
+  lsp = {
+    servers = {
+      "astro"
+    }
+  },
+
   keymaps = {
     { key = 'gi', func = vim.lsp.buf.implementation, desc = 'implementation' },
     { key = '<Leader>rn', func = require('navigator.rename').rename, desc = 'rename' }
