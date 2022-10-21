@@ -59,4 +59,6 @@ packer.startup(function(use)
   use 'ray-x/navigator.lua'
   use 'akinsho/toggleterm.nvim'
 
+  use 'rmagatti/auto-session'
+
 end)
