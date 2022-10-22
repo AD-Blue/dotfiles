@@ -9,8 +9,8 @@ navigator.setup({
 
     require("aerial").on_attach(client, bufnr)
 
-    client.resolved_capabilities.document_formatting = false
-    client.resolved_capabilities.document_range_formatting = false
+    client.server_capabilities.document_formatting = false
+    client.server_capabilities.document_range_formatting = false
 
     --Enable completion triggered by <c-x><c-o>
     buf_set_option('omnifunc', 'v:lua.vim.lsp.omnifunc')
@@ -29,7 +29,7 @@ navigator.setup({
       vim.api.nvim_create_autocmd("BufWritePre", {
         group = vim.api.nvim_create_augroup("Format", { clear = true }),
         buffer = bufnr,
-        callback = function() vim.lsp.buf.formatting_seq_sync() end
+        callback = function() vim.lsp.buf.format() end
       })
     end
   end,
@@ -46,4 +46,3 @@ navigator.setup({
   }
 
 })
-

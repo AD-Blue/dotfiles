@@ -50,7 +50,6 @@ vim.opt.formatoptions:append { 'r' }
 
 -- enable lua files, disable old filetypes
 vim.g.do_filetype_lua = 1
-vim.g.did_load_filetypes = 0
 
 -- add filetype detection for astro
 vim.filetype.add({

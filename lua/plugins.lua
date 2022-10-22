@@ -47,11 +47,6 @@ packer.startup(function(use)
   use({
       "kylechui/nvim-surround", -- For wrapping text in tags, brackets, braces, quotes, etc
       tag = "*", -- Use for stability; omit for the latest features
-      config = function()
-        require("nvim-surround").setup({
-            -- Configuration here, or leave empty to use defaults
-        })
-      end
   })
   use 'stevearc/aerial.nvim'
   use 'sitiom/nvim-numbertoggle'
@@ -60,5 +55,8 @@ packer.startup(function(use)
   use 'akinsho/toggleterm.nvim'
 
   use 'rmagatti/auto-session'
+  use 'vim-test/vim-test'
+  use 'ggandor/leap.nvim'
 
-end)
+  end
+)
