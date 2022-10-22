@@ -45,12 +45,12 @@ packer.startup(function(use)
   use 'sindrets/diffview.nvim'
   use 'gpanders/editorconfig.nvim' -- For editorconfig
   use({
-      "kylechui/nvim-surround", -- For wrapping text in tags, brackets, braces, quotes, etc
-      tag = "*", -- Use for stability; omit for the latest features
+    "kylechui/nvim-surround", -- For wrapping text in tags, brackets, braces, quotes, etc
+    tag = "*", -- Use for stability; omit for the latest features
   })
   use 'stevearc/aerial.nvim'
   use 'sitiom/nvim-numbertoggle'
-  use {'ray-x/guihua.lua', run = 'cd lua/fzy && make'}
+  use { 'ray-x/guihua.lua', run = 'cd lua/fzy && make' }
   use 'ray-x/navigator.lua'
   use 'akinsho/toggleterm.nvim'
 
@@ -58,5 +58,11 @@ packer.startup(function(use)
   use 'vim-test/vim-test'
   use 'ggandor/leap.nvim'
 
-  end
+  use {
+    'nvim-tree/nvim-tree.lua',
+    requires = {
+      'nvim-tree/nvim-web-devicons',
+    }
+  }
+end
 )
