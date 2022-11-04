@@ -74,5 +74,7 @@ packer.startup(function(use)
     }
   }
 
+  use 'nacro90/numb.nvim'
+
 end
 )
