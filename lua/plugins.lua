@@ -19,6 +19,7 @@ packer.startup(function(use)
   use 'neovim/nvim-lspconfig' -- LSP
   use 'jose-elias-alvarez/null-ls.nvim' -- Use Neovim as a language server to inject LSP diagnostics, code actions, and more via Lua
   use 'MunifTanjim/prettier.nvim' -- Prettier plugin for Neovim's built-in LSP client
+
   use 'williamboman/mason.nvim'
   use 'williamboman/mason-lspconfig.nvim'
   --  disabling LSP Saga to test out navigator since it's supposed to have similar functionality
@@ -52,7 +53,8 @@ packer.startup(function(use)
   use 'stevearc/aerial.nvim'
   use 'sitiom/nvim-numbertoggle'
   use { 'ray-x/guihua.lua', run = 'cd lua/fzy && make' }
-  use 'ray-x/navigator.lua'
+  --  disabling Navigator to try out Mason LOL
+  --  use 'ray-x/navigator.lua'
   use 'akinsho/toggleterm.nvim'
 
   use 'rmagatti/auto-session'
@@ -75,6 +77,8 @@ packer.startup(function(use)
   }
 
   use 'nacro90/numb.nvim'
+
+  use 'folke/which-key.nvim'
 
 end
 )
