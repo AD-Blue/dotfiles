@@ -7,8 +7,6 @@ navigator.setup({
 
     local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
 
-    require("aerial").on_attach(client, bufnr)
-
     client.server_capabilities.document_formatting = false
     client.server_capabilities.document_range_formatting = false
 
@@ -37,6 +35,13 @@ navigator.setup({
   lsp = {
     servers = {
       "astro"
+    },
+    tsserver = {
+      init_options = {
+        preferences = {
+          importModuleSpecifierPreference = "relative"
+        }
+      }
     }
   },
 
