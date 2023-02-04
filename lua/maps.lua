@@ -1,6 +1,6 @@
 local keymap = vim.keymap
 
-vim.g.mapleader = "\\"
+vim.g.mapleader = " "
 
 keymap.set('n', 'x', '"_x')
 
@@ -42,7 +42,10 @@ keymap.set('n', ';,',
   end
 )
 
+keymap.set('n', '<leader>w', ':w<CR>')
+keymap.set('n', '<leader>q', ':q<CR>')
+
 -- Testing
-keymap.set('n', '<leader>tf', ':TestFile<Return>')  -- Run all tests in file
-keymap.set('n', '<leader>ts', ':TestSuite<Return>') -- Run all tests in test suite
-keymap.set('n', '<leader>tn', ':TestNearest<Return>') -- Run test that's closest to the cursor
+--keymap.set('n', '<leader>tf', ':TestFile<Return>')  -- Run all tests in file
+--keymap.set('n', '<leader>ts', ':TestSuite<Return>') -- Run all tests in test suite
+--keymap.set('n', '<leader>tn', ':TestNearest<Return>') -- Run test that's closest to the cursor
