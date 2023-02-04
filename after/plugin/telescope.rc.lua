@@ -1,4 +1,3 @@
-
 local status, telescope = pcall(require, "telescope")
 if (not status) then return end
 local actions = require('telescope.actions')
@@ -8,8 +7,6 @@ local function telescope_buffer_dir()
   return vim.fn.expand('%:p:h')
 end
 
-local fb_actions = require "telescope".extensions.file_browser.actions
-
 telescope.setup {
   defaults = {
     mappings = {
@@ -17,6 +14,9 @@ telescope.setup {
         ["q"] = actions.close
       },
     },
+    file_ignore_patterns = {
+     ".git/.*"
+    }
   },
   extensions = {
     file_browser = {
@@ -24,6 +24,7 @@ telescope.setup {
       -- disables netrw and use telescope-file-browser in its place
     },
   },
+  
 }
 
 telescope.load_extension('fzf')
