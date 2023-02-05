@@ -1,12 +1,31 @@
 local status, lspconfig = pcall(require, 'lspconfig')
 if (not status) then return end
 
+local on_attach = function(client, bufnr)
+  local bufopts = { noremap = true, silent = true, buffer = bufnr}
+
+  vim.keymap.set('n', 'gd', vim.lsp.buf.definition, bufopts)
+  vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
+  vim.keymap.set('n', 'K', vim.lsp.buf.hover, bufopts)
+  vim.keymap.set('n', '<leader>k', vim.lsp.buf.signature_help, bufopts)
+  vim.keymap.set('n', '<leader>D', vim.lsp.buf.type_definition, bufopts)
+  vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, bufopts)
+  vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, bufopts)
+end
+
 lspconfig.tsserver.setup({
- filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
+  on_attach = on_attach,
+  filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
   cmd = { "typescript-language-server", "--stdio" },
+  init_options = {
+    preferences = {
+      importModuleSpecifierPreference = "relative"
+    }
+  }
 })
 
 lspconfig.sumneko_lua.setup({
+  on_attach = on_attach,
   settings = {
     Lua = {
       diagnostics = {

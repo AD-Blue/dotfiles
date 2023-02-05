@@ -12,7 +12,8 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 
-require('lazy').setup({
+require('lazy').setup(
+  {
     'folke/tokyonight.nvim',
     {
       'nvim-treesitter/nvim-treesitter',
@@ -53,7 +54,31 @@ require('lazy').setup({
     {
       'L3MON4D3/LuaSnip',
       build = "make install_jsregexp"
-    }
+    },
+
+    {
+      'SmiteshP/nvim-navic',
+      dependencies = 'neovim/nvim-lspconfig'
+    },
+
+    'ggandor/leap.nvim',
+    'kylechui/nvim-surround',
+    'nvim-tree/nvim-tree.lua',
+
+    -- git stuff
+    {
+      'sindrets/diffview.nvim',
+      dependencies = 'nvim-lua/plenary.nvim'
+    },
+    'dinhhuy258/git.nvim',
+    'lewis6991/gitsigns.nvim',
+
+    'stevearc/aerial.nvim',
+    'sitiom/nvim-numbertoggle',
+    'vim-test/vim-test',
+    'nacro90/numb.nvim',
+
+    { 'akinsho/bufferline.nvim', dependencies = 'nvim-tree/nvim-web-devicons' }
 
   }
 )

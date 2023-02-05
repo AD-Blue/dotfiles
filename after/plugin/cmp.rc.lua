@@ -41,6 +41,11 @@ cmp.setup({
         fallback()
       end
     end, { "i", "s" }),
+
+    ['<CR>'] = cmp.mapping.confirm({
+      behavior = cmp.ConfirmBehavior.Replace,
+      select = true
+    }),
   }),
   window = {
     completion = cmp.config.window.bordered()
