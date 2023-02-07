@@ -49,3 +49,5 @@ keymap.set('n', '<leader>q', ':q<CR>')
 keymap.set('n', '<leader>tf', ':TestFile<Return>')  -- Run all tests in file
 keymap.set('n', '<leader>ts', ':TestSuite<Return>') -- Run all tests in test suite
 keymap.set('n', '<leader>tn', ':TestNearest<Return>') -- Run test that's closest to the cursor
+
+keymap.set('n', '<leader>,', '$a,<Esc>') -- add a comma at the end of the current line

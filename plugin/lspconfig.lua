@@ -41,3 +41,5 @@ lspconfig.sumneko_lua.setup({
     },
   },
 })
+
+lspconfig.terraformls.setup{}
