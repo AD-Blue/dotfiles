@@ -24,7 +24,6 @@ telescope.setup {
       -- disables netrw and use telescope-file-browser in its place
     },
   },
-  
 }
 
 telescope.load_extension('fzf')
@@ -34,7 +33,8 @@ vim.keymap.set('n', ';f',
   function()
     builtin.find_files({
       no_ignore = false,
-      hidden = true
+      hidden = true,
+      respect_gitignore = false
     })
   end)
 vim.keymap.set('n', ';r', function()
