@@ -22,6 +22,7 @@ require('lazy').setup(
         ts_update()
       end,
     },
+    "windwp/nvim-ts-autotag",
     'nvim-lua/plenary.nvim',
     'rmagatti/auto-session',
 
