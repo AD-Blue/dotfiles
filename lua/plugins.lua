@@ -35,7 +35,9 @@ require('lazy').setup(
     'nvim-telescope/telescope-file-browser.nvim',
 
     'windwp/nvim-autopairs',
-    'lukas-reineke/indent-blankline.nvim',
+
+    { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
+
     'nvim-tree/nvim-web-devicons',
     'nvim-lualine/lualine.nvim',
 
@@ -43,7 +45,7 @@ require('lazy').setup(
     'neovim/nvim-lspconfig',
     'williamboman/mason.nvim',
     'williamboman/mason-lspconfig.nvim',
-    'jose-elias-alvarez/null-ls.nvim',
+    'nvimtools/none-ls.nvim',
 
     -- CMP
     'hrsh7th/cmp-nvim-lsp',
@@ -53,8 +55,9 @@ require('lazy').setup(
     'hrsh7th/nvim-cmp',
 
     {
-      'L3MON4D3/LuaSnip',
-      build = "make install_jsregexp"
+    	"L3MON4D3/LuaSnip",
+    	version = "v2.*",
+    	build = "make install_jsregexp"
     },
 
     {
@@ -79,7 +82,14 @@ require('lazy').setup(
     'vim-test/vim-test',
     'nacro90/numb.nvim',
 
-    { 'akinsho/bufferline.nvim', dependencies = 'nvim-tree/nvim-web-devicons' }
+    { 'akinsho/bufferline.nvim', dependencies = 'nvim-tree/nvim-web-devicons' },
 
+    {
+      'Exafunction/codeium.vim',
+      event = 'BufEnter',
+      config = function ()
+        vim.keymap.set('i', '<C-l>', function () return vim.fn['codeium#Accept']() end, { expr = true })
+      end
+    }
   }
 )

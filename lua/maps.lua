@@ -1,6 +1,7 @@
 local keymap = vim.keymap
 
 vim.g.mapleader = " "
+vim.g.codeium_no_map_tab = 1
 
 keymap.set('n', 'x', '"_x')
 
