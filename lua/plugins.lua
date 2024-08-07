@@ -45,8 +45,12 @@ require('lazy').setup(
     'neovim/nvim-lspconfig',
     'williamboman/mason.nvim',
     'williamboman/mason-lspconfig.nvim',
-    'nvimtools/none-ls.nvim',
-
+    {
+      "nvimtools/none-ls.nvim",
+      dependencies = {
+        "nvimtools/none-ls-extras.nvim",
+      },
+    },
     -- CMP
     'hrsh7th/cmp-nvim-lsp',
     'hrsh7th/cmp-buffer',
@@ -90,6 +94,12 @@ require('lazy').setup(
       config = function ()
         vim.keymap.set('i', '<C-l>', function () return vim.fn['codeium#Accept']() end, { expr = true })
       end
+    },
+
+    {
+      "ThePrimeagen/harpoon",
+      branch = "harpoon2",
+      dependencies = { "nvim-lua/plenary.nvim" }
     }
   }
 )

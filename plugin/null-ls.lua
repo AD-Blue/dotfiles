@@ -5,7 +5,7 @@ local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
 null_ls.setup({
   sources = {
-    null_ls.builtins.diagnostics.eslint_d,
+    require("none-ls.diagnostics.eslint_d"),
     null_ls.builtins.formatting.prettierd
   },
 
@@ -16,7 +16,7 @@ null_ls.setup({
         group = augroup,
         buffer = bufnr,
         callback = function()
-          vim.lsp.buf.format({ bufnr = bufnr })
+          vim.lsp.buf.format({ async = false })
         end,
       })
     end
