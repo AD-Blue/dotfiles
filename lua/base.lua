@@ -57,3 +57,7 @@ vim.filetype.add({
     astro = "astro"
   }
 })
+
+vim.g.codeium_filetypes = {
+  rust = false
+}

@@ -18,9 +18,6 @@ treesitter.setup {
     "lua",
     "rust"
   },
-  autotag = {
-    enable = true,
-  },
   incremental_selection = { -- smart select. Hit enter in a treesitter supported language to start
     enable = true,
     keymaps = {
