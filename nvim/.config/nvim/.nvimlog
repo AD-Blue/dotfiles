@@ -1,0 +1,3 @@
+WRN 2026-08-18T15:34:14.430 ?.59734    server_start:193: Failed to start server: operation not permitted: /tmp/claude-501/nvim.ariesdimaranan/JD5bwY/nvim.59734.0
+WRN 2026-08-18T15:34:15.216 ?.59810    server_start:193: Failed to start server: operation not permitted: /tmp/claude-501/nvim.ariesdimaranan/kVV0TG/nvim.59810.0
+WRN 2026-08-18T15:35:08.775 ?.62061    server_start:193: Failed to start server: operation not permitted: /tmp/claude-501/nvim.ariesdimaranan/7GMCIa/nvim.62061.0
