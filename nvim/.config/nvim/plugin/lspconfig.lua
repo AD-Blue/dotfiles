@@ -66,4 +66,4 @@ vim.lsp.config('rubocop', {
   end,
 })
 
-vim.lsp.enable({ 'ts_ls', 'lua_ls', 'ruby_lsp', 'rubocop', 'terraformls' })
+vim.lsp.enable({ 'ts_ls', 'lua_ls' })
