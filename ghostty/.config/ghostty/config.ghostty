@@ -1,0 +1,12 @@
+notify-on-command-finish-after = 2m
+window-subtitle = working-directory
+macos-option-as-alt = true
+theme = Catppuccin Mocha
+
+custom-shader = shaders/ripple_cursor.glsl
+custom-shader = shaders/cursor_warp.glsl
+
+background-opacity = 0.8
+background-blur = true
+
+font-family = "JetBrains Mono"
