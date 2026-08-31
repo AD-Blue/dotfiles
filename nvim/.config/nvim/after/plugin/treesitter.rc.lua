@@ -4,6 +4,8 @@ if (not status) then return end
 treesitter.setup()
 
 treesitter.install({
+  "ruby",
+  "embedded_template",
   "tsx",
   "json",
   "yaml",

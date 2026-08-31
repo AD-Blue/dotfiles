@@ -50,20 +50,14 @@ vim.lsp.config('lua_ls', {
   },
 })
 
+local ruby_lsp = vim.fn.expand('~/.rbenv/shims/ruby-lsp')
+
 vim.lsp.config('ruby_lsp', {
   -- --use-launcher: boot gracefully in monorepos/worktrees where the nearest
   -- (nested service) Gemfile has no committed Gemfile.lock, and degrade to a
   -- minimal bundle instead of crashing when app gems can't be installed.
   -- Avoids per-worktree `bundle install` in service dirs (exit 78 / exit 1).
-  cmd = { "ruby-lsp", "--use-launcher" },
+  cmd = { vim.uv.fs_stat(ruby_lsp) and ruby_lsp or 'ruby-lsp', '--use-launcher' },
 })
 
-vim.lsp.config('rubocop', {
-  on_attach = function(client, bufnr)
-    client.server_capabilities.documentFormattingProvider = false
-    client.server_capabilities.documentRangeFormattingProvider = false
-    on_attach(client, bufnr)
-  end,
-})
-
-vim.lsp.enable({ 'ts_ls', 'lua_ls' })
+vim.lsp.enable({ 'ts_ls', 'lua_ls', 'ruby_lsp' })

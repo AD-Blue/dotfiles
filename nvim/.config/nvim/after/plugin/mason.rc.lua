@@ -7,8 +7,5 @@ local status2, masonLspConfig = pcall(require, 'mason-lspconfig')
 if (not status2) then return end
 
 masonLspConfig.setup({
-  ensure_installed = {
-    "ruby_lsp",
-    "rubocop",
-  }
+  automatic_enable = { exclude = { "rubocop" } },
 })
