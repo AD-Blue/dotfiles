@@ -1,7 +1,7 @@
-require('base')
-require('maps')
-require('highlights')
-require('plugins')
+require("base")
+require("maps")
+require("highlights")
+require("plugins")
 
-vim.cmd[[colorscheme tokyonight]]
-vim.opt.clipboard:append { 'unnamedplus' }
+vim.cmd.colorscheme("catppuccin-mocha")
+vim.opt.clipboard:append({ "unnamedplus" })

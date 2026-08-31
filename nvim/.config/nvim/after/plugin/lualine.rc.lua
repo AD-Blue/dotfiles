@@ -1,15 +1,17 @@
 local status, lualine = pcall(require, "lualine")
-if (not status) then return end
+if not status then
+	return
+end
 
 lualine.setup({
-  options = {
-    theme = 'tokyonight'
-  },
+	options = {
+		theme = "auto",
+	},
 
-  sections = {
-    lualine_c = {{
-      'filename',
-      path = 1
-    }}
-  }
+	sections = {
+		lualine_c = { {
+			"filename",
+			path = 1,
+		} },
+	},
 })

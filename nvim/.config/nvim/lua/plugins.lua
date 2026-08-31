@@ -12,7 +12,26 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-	"folke/tokyonight.nvim",
+	--{
+	--	"folke/tokyonight.nvim",
+	--	opts = {
+	--		style = "night",
+	--		transparent = true,
+	--		styles = {
+	--			sidebars = "transparent",
+	--			floats = "transparent",
+	--		},
+	--	},
+	--},
+	{
+		"catppuccin/nvim",
+		name = "catppuccin",
+		priority = 1000,
+		opts = {
+			flavour = "mocha",
+			transparent_background = true,
+		},
+	},
 	{
 		"nvim-treesitter/nvim-treesitter",
 		branch = "main",
@@ -73,7 +92,7 @@ require("lazy").setup({
 		dependencies = "neovim/nvim-lspconfig",
 	},
 
-	"ggandor/leap.nvim",
+	"https://codeberg.org/andyg/leap.nvim",
 	"kylechui/nvim-surround",
 	"nvim-tree/nvim-tree.lua",
 
